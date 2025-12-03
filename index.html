@@ -79,6 +79,24 @@ input {
 
     <button style="width: 240px; background: red;" onclick="clearDisplay()">Clear</button>
   </div>
+<script>
+    function press(num) {
+        document.getElementById('display').value += num;
+    }
+
+    function calculate() {
+        let x = document.getElementById('display').value;
+        try {
+            document.getElementById('display').value = eval(x);
+        } catch (e) {
+            alert("Invalid Input");
+        }
+    }
+
+    function clearDisplay() {
+        document.getElementById('display').value = "";
+    }
+</script>
 
 </body>
 </html>
